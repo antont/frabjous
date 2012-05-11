@@ -53,7 +53,7 @@ Frabjous.CallbackList = (function(){
       for(var i = list.length - 1; i >= 0; i--){
         // Call handle on each callback
         var result = list[i].handle.apply(this,args);
-        // Returned falsey so remove callback
+        // Returned false so remove callback
         if(!result){ list.splice(i,1); }
       }
     };
